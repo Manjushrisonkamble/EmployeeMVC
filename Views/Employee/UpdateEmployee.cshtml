@@ -1,0 +1,12 @@
+﻿@model Employee
+
+<form method="post" action="UpdateEmployee">
+    <input value="@Model.Id" name="Id" hidden><br><br>
+    <input value="@Model.Name" tyep="text" name="Name" placeholder="Enter Name"><br><br>
+    <input value="@Model.Age" tyep="number" name="Age" placeholder="Enter Age"><br><br>
+    <input value="@Model.Department" tyep="text" name="Department" placeholder="Enter Department"><br><br>
+    <input value="@Model.Designation" tyep="text" name="Designation" placeholder="Enter Designation"><br><br>
+    <input value="@Model.City"tyep="text" name="City" placeholder="Enter City"><br><br>
+    <button type="submit">Submit</button>
+
+</form>

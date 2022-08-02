@@ -1,0 +1,72 @@
+﻿@model List<Employee>
+
+
+<br>
+<br>
+
+<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Employee Table</p>
+
+<br>
+<br>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Roll_NO</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Department</th>
+        <th scope="col">Designation</th>
+        <th scope="col">City</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+
+        
+
+    </tr>
+    </thead>
+    <tbody>
+    @{foreach (var employee in Model)
+        {
+
+                <tr>
+                    <td scope="row">@employee.Id</td>
+                    <td scope="row">@employee.Name</td>
+                    <td>@employee.Age</td>
+                    <td>@employee.Department</td>
+                    <td>@employee.Designation</td>
+                    <td>@employee.City</td>
+                    <td><a href="@Url.Action("UpdateEmployee", "Employee", new { EmpId = employee.Id})">Update</a></td>
+                    <td><a href="@Url.Action("DeleteEmployee", "Employee", new { EmpId = employee.Id})">Delete</a></td>
+                    
+                </tr>
+
+
+
+        }
+    }
+    </tbody>
+
+
+</table>
+
+<br>
+<br>
+<a class="nav-link active" aria-current="page" href="@Url.Action("AddEmployee", "Employee")"><button type="submit" class="btn btn-primary" style="padding-left: 2.5rem; padding-right: 2.5rem;">ADD Employees</button></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
